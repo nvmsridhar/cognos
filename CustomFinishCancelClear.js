@@ -13,12 +13,10 @@ define(function () {
 			'.myButton { height:32px; width:120px; cursor:pointer; margin-left:10px; color:#4178BE; font-size:14px; padding:6px 12px 6px 12px; background-color:white; border:1px solid #4178BE; }' +
 			'.myButton:hover { background-color:#4178BE; color:white; border:1px solid #4178BE; }' +
 		'</style>' +
-		'<button class="myButton btnClear" type="button">Clear</button>' +
-		'<button class="myButton btnCancel" type="button">Cancel</button>' +
-		'<button class="myButton btnFinish" type="button">Finish</button>';
+		'<button class="myButton btnFinish" type="button">Go</button><br><br>' +
+		'<button class="myButton btnClear" type="button">Reset</button>';
 
 		el.querySelector(".btnClear").onclick = this.f_clearButtonClick.bind(this, oControlHost);
-		el.querySelector(".btnCancel").onclick = oControlHost.cancel.bind(oControlHost);
 		el.querySelector(".btnFinish").onclick = this.finishButtonClick.bind(this, oControlHost);
 	};
 
