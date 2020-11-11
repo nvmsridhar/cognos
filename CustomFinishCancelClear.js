@@ -10,14 +10,13 @@ define(function () {
 		var el = oControlHost.container;
 		el.innerHTML =
 		'<div><style>' +
-			'.myButton { height:32px; width:120px; cursor:pointer; margin-left:10px; color:#4178BE; font-size:14px; padding:6px 12px 6px 12px; background-color:white; border:1px solid #4178BE; }' +
-			'.myButton:hover { background-color:#4178BE; color:white; border:1px solid #4178BE; }' +
+			'.myButton { border-radius: 20px;height: 28px;width: 65px;cursor: pointer;/* margin-left: 10px; */color: white;font-size: 14px;/* padding: 6px 12px 6px 12px; */background-color: #336699;border: 0px solid; }' + '.myButton:hover { color: grey;background-color: #132777; }' +
 		'</style>' +
 		'<button class="myButton btnFinish" type="button">Go</button><br><br>' +
 		'<button class="myButton btnClear" type="button">Reset</button></div>';
-
-		el.querySelector(".btnClear").onclick = this.f_clearButtonClick.bind(this, oControlHost);
+		
 		el.querySelector(".btnFinish").onclick = this.finishButtonClick.bind(this, oControlHost);
+		el.querySelector(".btnClear").onclick = this.f_clearButtonClick.bind(this, oControlHost);
 	};
 
 
