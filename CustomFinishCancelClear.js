@@ -10,7 +10,7 @@ define(function () {
 		var el = oControlHost.container;
 		el.innerHTML =
 		'<div><style>' +
-			'.myButtonDemo { border-radius: 20px;height: 28px;width: 65px;cursor: pointer;/* margin-left: 10px; */color: white;font-size: 14px;/* padding: 6px 12px 6px 12px; */background-color: #336699;border: 0px solid; }' + '.myButtonDemo:hover { color: grey;background-color: #132777; }' +
+			'.myButtonDemo { border-radius: 20px;height: 28px;width: 65px;cursor: pointer;color: White;font-size: 14px;background-color: #336699;border: 0px solid; }' + '.myButtonDemo:hover { color: White;background-color: #132777; }' +
 		'</style>' +
 		'<button class="myButtonDemo btnFinish" type="button">Go</button><br><br>' +
 		'<button class="myButtonDemo btnClear" type="button">Reset</button></div>';
