@@ -12,8 +12,8 @@ define(function () {
 		'<div><style>' +
 			'.myButtonDemo { border-radius: 20px;height: 28px;width: 65px;cursor: pointer;/* margin-left: 10px; */color: white;font-size: 14px;/* padding: 6px 12px 6px 12px; */background-color: #336699;border: 0px solid; }' + '.myButtonDemo:hover { color: grey;background-color: #132777; }' +
 		'</style>' +
-		'<button class="myButtonDemo" type="button">Go</button><br><br>' +
-		'<button class="myButtonDemo" type="button">Reset</button></div>';
+		'<button class="myButtonDemo btnFinish" type="button">Go</button><br><br>' +
+		'<button class="myButtonDemo btnClear" type="button">Reset</button></div>';
 		
 		el.querySelector(".btnFinish").onclick = this.finishButtonClick.bind(this, oControlHost);
 		el.querySelector(".btnClear").onclick = this.f_clearButtonClick.bind(this, oControlHost);
