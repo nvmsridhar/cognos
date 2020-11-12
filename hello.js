@@ -1,18 +1,43 @@
-define(["jquery"], function($) {
-"use strict";
+define(function () {
+	"use strict";
 
-function CalendarSpace()
-{
-};
+	function validatePromptValue() {
+	};
 
-CalendarSpace.prototype.draw = function( oControlHost ) {
-	var conf= oControlHost.configuration;
-	if(!conf){
-		conf = {}
-	}
-	$("table").find("[specname='selectDate']").css("width", "auto");
-	$(".clsCCHLDatePickerButton").css("padding-left", (!conf.space ? "0px" : conf.space));
-};
 
-return CalendarSpace;
+	validatePromptValue.prototype.draw = function (oControlHost) {
+
+		var el = oControlHost.container;
+		el.innerHTML =
+		'<div><style>' +
+			'.myButtonDemo { border-radius: 20px;height: 28px;width: 65px;cursor: pointer;color: White;font-size: 14px;background-color: #336699;border: 0px solid; }' + '.myButtonDemo:hover { color: White;background-color: #132777; }' +
+		'</style>' +
+		'<button class="myButtonDemo btnFinish" type="button">Go</button><br><br>' +
+		'<button class="myButtonDemo btnClear" type="button">Reset</button></div>';
+		
+		el.querySelector(".btnFinish").onclick = this.finishButtonClick.bind(this, oControlHost);
+		el.querySelector(".btnClear").onclick = this.f_clearButtonClick.bind(this, oControlHost);
+	};
+
+
+	validatePromptValue.prototype.finishButtonClick = function (oControlHost) {
+
+		oControlHost.finish();
+
+	};
+
+
+	validatePromptValue.prototype.f_clearButtonClick = function (oControlHost) {
+
+		var aControls = oControlHost.page.getAllPromptControls();
+
+		for (var i = 0; i < aControls.length; i++) {
+			var oControl = aControls[i];
+			oControl.clearValues();
+		}
+
+
+	};
+
+	return validatePromptValue;
 });
