@@ -1,11 +1,11 @@
 define(function () {
 	"use strict";
 
-	function validatePromptValue() {
+	function CustomGoResetButtons() {
 	};
 
 
-	validatePromptValue.prototype.draw = function (oControlHost) {
+	CustomGoResetButtons.prototype.draw = function (oControlHost) {
 
 		var el = oControlHost.container;
 		el.innerHTML =
@@ -20,14 +20,14 @@ define(function () {
 	};
 
 
-	validatePromptValue.prototype.finishButtonClick = function (oControlHost) {
+	CustomGoResetButtons.prototype.finishButtonClick = function (oControlHost) {
 
 		oControlHost.finish();
 
 	};
 
 
-	validatePromptValue.prototype.f_clearButtonClick = function (oControlHost) {
+	CustomGoResetButtons.prototype.f_clearButtonClick = function (oControlHost) {
 
 		var aControls = oControlHost.page.getAllPromptControls();
 
@@ -39,5 +39,5 @@ define(function () {
 
 	};
 
-	return validatePromptValue;
+	return CustomGoResetButtons;
 });
