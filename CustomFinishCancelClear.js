@@ -1,11 +1,11 @@
 define(function () {
 	"use strict";
 
-	function CustomGoResetButtons() {
+	function CustomGoReset() {
 	};
 
 
-	CustomGoResetButtons.prototype.draw = function (oControlHost) {
+	CustomGoReset.prototype.draw = function (oControlHost) {
 
 		var el = oControlHost.container;
 		el.innerHTML =
@@ -20,14 +20,14 @@ define(function () {
 	};
 
 
-	CustomGoResetButtons.prototype.finishButtonClick = function (oControlHost) {
+	CustomGoReset.prototype.finishButtonClick = function (oControlHost) {
 
 		oControlHost.finish();
 
 	};
 
 
-	CustomGoResetButtons.prototype.f_clearButtonClick = function (oControlHost) {
+	CustomGoReset.prototype.f_clearButtonClick = function (oControlHost) {
 
 		var aControls = oControlHost.page.getAllPromptControls();
 
@@ -39,5 +39,5 @@ define(function () {
 
 	};
 
-	return CustomGoResetButtons;
+	return CustomGoReset;
 });
