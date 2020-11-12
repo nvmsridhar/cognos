@@ -11,7 +11,7 @@ CalendarSpace.prototype.draw = function( oControlHost ) {
 		conf = {}
 	}
 	$("table").find("[specname='selectDate']").css("width", "auto");
-	$(".clsCCHLDatePickerButton").css("padding-left", "0px");
+	$(".clsCCHLDatePickerButton").css("padding-left", (!conf.space ? "0px" : conf.space));
 	$(".clsListViewReportView").css("line-height", (!conf.lineHeight ? "15px" : conf.lineHeight));
 };
 
