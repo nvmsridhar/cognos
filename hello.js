@@ -1,18 +1,18 @@
 define(function () {
 	"use strict";
 
-	function validatePromptValue() {
+	function CustomGoReset() {
 	};
 
 
-	validatePromptValue.prototype.draw = function (oControlHost) {
+	CustomGoReset.prototype.draw = function (oControlHost) {
 
 		var el = oControlHost.container;
 		el.innerHTML =
 		'<div><style>' +
-			'.myButtonDemo { border-radius: 20px;height: 28px;width: 65px;cursor: pointer;color: White;font-size: 14px;background-color: #336699;border: 0px solid; }' + '.myButtonDemo:hover { color: White;background-color: #132777; }' +
+			'.myButtonDemo { border-radius: 20px;height: 20px;width: 50px;cursor: pointer;color: White;font-size: 8pt;background-color: #336699;border: 0px solid; }' + '.myButtonDemo:hover { color: White;background-color: #132777; }' + '.btnFinish { margin-top: 5px; }' + '.btnClear { margin-top: 15px; }' +
 		'</style>' +
-		'<button class="myButtonDemo btnFinish" type="button">Go</button><br><br>' +
+		'<button class="myButtonDemo btnFinish" type="button">Go</button><br>' +
 		'<button class="myButtonDemo btnClear" type="button">Reset</button></div>';
 		
 		el.querySelector(".btnFinish").onclick = this.finishButtonClick.bind(this, oControlHost);
@@ -20,14 +20,14 @@ define(function () {
 	};
 
 
-	validatePromptValue.prototype.finishButtonClick = function (oControlHost) {
+	CustomGoReset.prototype.finishButtonClick = function (oControlHost) {
 
 		oControlHost.finish();
 
 	};
 
 
-	validatePromptValue.prototype.f_clearButtonClick = function (oControlHost) {
+	CustomGoReset.prototype.f_clearButtonClick = function (oControlHost) {
 
 		var aControls = oControlHost.page.getAllPromptControls();
 
@@ -39,5 +39,5 @@ define(function () {
 
 	};
 
-	return validatePromptValue;
+	return CustomGoReset;
 });
